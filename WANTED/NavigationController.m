@@ -13,10 +13,11 @@
 -(void)viewDidLoad{
     
 #ifdef __IPHONE_7_0
-    if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0) {
-        self.navigationBar.translucent = NO;
-    }
+//    if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0) {
+//        self.navigationBar.translucent = NO;
+//    }
 #endif
     
 }
+
 @end

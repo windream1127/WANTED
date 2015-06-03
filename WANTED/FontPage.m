@@ -9,12 +9,11 @@
 #import "FontPage.h"
 #import "LoginView.h"
 #import "AppDelegate.h"
-
+#import "Login.h"
 @implementation FontPage
 
 -(void)viewDidLoad{
-
-    UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(0,0, 100, 40)];
+    UIButton *bt = [[UIButton alloc]initWithFrame:CGRectMake(0,64, 100, 40)];
     bt.backgroundColor = [UIColor blueColor];
     bt.titleLabel.text = @"11";
     bt.titleLabel.textColor = [UIColor whiteColor];
@@ -25,7 +24,8 @@
 -(void)Click{
 //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"11" message:@"11" delegate:nil cancelButtonTitle:@"11" otherButtonTitles:@"11", nil];
 //    [alert show];
-    LoginView *login = [[LoginView alloc]init];
+//    LoginView *login = [[LoginView alloc]init];
+    Login *login = [[Login alloc]init];
 //    [UIApplication sharedApplication].delegate.
     UINavigationController *rootNav = ((AppDelegate*)[UIApplication sharedApplication].delegate).rootNav;
     [rootNav pushViewController:login animated:NO];

@@ -30,7 +30,8 @@
  */
 -(void)buildFrame{
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"navigationBar"]stretchableImageWithLeftCapWidth:10 topCapHeight:10]  forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"clearBG"]stretchableImageWithLeftCapWidth:5 topCapHeight:5]  forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"clearBG"]];
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
