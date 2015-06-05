@@ -1,20 +1,30 @@
 //
-//  dragView.m
+//  DragView.m
 //  WANTED
 //
 //  Created by lei_dream on 15/6/3.
 //  Copyright (c) 2015年 lei_dream. All rights reserved.
 //
 
-#import "dragView.h"
-static const CGFloat kInset = 200.0f;
+#import "DragView.h"
+#import "FXBlurView.h"
+static const CGFloat kInset = 250.0f;
 
 @interface DragView()
+
 @property(strong, nonatomic)UIImageView *zoomView;
+
+@property(strong, nonatomic)NSString *titleText; //顶部标题
+
 @end
+
+
 @implementation DragView
 
 -(void)viewDidLoad{
+    // 设置导航默认标题的颜色及字体大小
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                    NSFontAttributeName : [UIFont boldSystemFontOfSize:18]};
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.contentView];
     [self.contentView addSubview: self.zoomView];
@@ -26,8 +36,8 @@ static const CGFloat kInset = 200.0f;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
     CGFloat yOffset  = scrollView.contentOffset.y;
-//    NSLog(@"1111   %f",yOffset);
     CGRect f = self.zoomView.frame;
     if (yOffset < -kInset) {
         f.origin.y = yOffset;
@@ -35,18 +45,36 @@ static const CGFloat kInset = 200.0f;
         self.zoomView.frame = f;
     }
     if (yOffset >= -64) {
-        f.origin.y = -200 + (yOffset+64);
-        f.size.height = 200;
+        f.origin.y = -kInset + (yOffset+64);
+        f.size.height = kInset;
         self.zoomView.frame = f;
-//        NSLog(@"2222   %f",f.origin.y);
+        
+        [self isGetTop:YES];
+//        if([self.delegate respondsToSelector:@selector(isGetTop:)])
+//        {
+//            [self.delegate isGetTop:YES];
+//        }
+    }
+    else{
+//        if([self.delegate respondsToSelector:@selector(isGetTop:)])
+//        {
+//            [self.delegate isGetTop:NO];
+//        }
+        [self isGetTop:NO];
     }
 }
 
 -(void)setZoomImage:(UIImage *)zoomImage{
-    _zoomView = [[UIImageView alloc]initWithImage:zoomImage];
-    _zoomView.frame = CGRectMake(-100, -kInset, [UIScreen mainScreen].bounds.size.width+200, 200);
-    _zoomView.contentMode = UIViewContentModeScaleAspectFit;
-    _zoomView.backgroundColor = [UIColor whiteColor];
+    zoomImage = [zoomImage blurredImageWithRadius:5 iterations:5 tintColor:[UIColor blackColor]];
+    if (!_zoomView) {
+        _zoomView = [[UIImageView alloc]initWithImage:zoomImage];
+        _zoomView.frame = CGRectMake(-100, -kInset, [UIScreen mainScreen].bounds.size.width+200, 200);
+        _zoomView.contentMode = UIViewContentModeScaleAspectFit;
+        _zoomView.backgroundColor = [UIColor whiteColor];
+    }
+    else{
+        [_zoomView setImage:zoomImage];
+    }
 }
 
 -(UIImageView *)zoomView{
@@ -67,7 +95,7 @@ static const CGFloat kInset = 200.0f;
         _contentView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,0, contentWidth, contentHeight)];
         _contentView.contentInset = UIEdgeInsetsMake(kInset, 0, 0, 0);
         CGSize contentSize = [UIScreen mainScreen].bounds.size;
-        contentSize.height *= 2; 
+//        contentSize.height *= 2; 
         _contentView.contentSize = contentSize;
         _contentView.backgroundColor = [UIColor grayColor];
         _contentView.delegate = self;
@@ -75,5 +103,14 @@ static const CGFloat kInset = 200.0f;
         
     }
     return _contentView;
+}
+
+/**
+ *  子类重写此方法（之前用的代理，觉得不好看）
+ *
+ *  @param isTop 是否达到顶部
+ */
+-(void)isGetTop:(BOOL)isTop{
+    
 }
 @end

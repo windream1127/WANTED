@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 lei_dream. All rights reserved.
 //
 
-#import "dragView.h"
+#import "DragView.h"
 
 @interface Login : DragView
 

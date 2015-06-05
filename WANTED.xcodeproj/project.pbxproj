@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1C405E5B28FDF9004A6AA328 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C43530B3D989CD2159CBC9 /* libPods.a */; };
-		3B09DF6C1B1ECC3E004546D6 /* dragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09DF6B1B1ECC3E004546D6 /* dragView.m */; };
 		3B09DF6F1B1EDCD0004546D6 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09DF6E1B1EDCD0004546D6 /* Login.m */; };
 		3B20C9E91B1D729500013749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20C9E81B1D729500013749 /* main.m */; };
 		3B20C9EC1B1D729500013749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20C9EB1B1D729500013749 /* AppDelegate.m */; };
@@ -25,6 +24,8 @@
 		3B20CA1E1B1D8E7F00013749 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CA1D1B1D8E7F00013749 /* WelcomeView.m */; };
 		3B20CA211B1DA1A400013749 /* Utilitise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CA201B1DA1A400013749 /* Utilitise.m */; };
 		3B20CA271B1DB9A900013749 /* AcountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CA261B1DB9A900013749 /* AcountModel.m */; };
+		3B64A1301B21876B006B4492 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B64A12F1B21876B006B4492 /* FXBlurView.m */; };
+		3BA9E15E1B21464800E946CE /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9E15D1B21464800E946CE /* DragView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 
 /* Begin PBXFileReference section */
 		2DA3925A698A5AF55035DC33 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		3B09DF6A1B1ECC3E004546D6 /* dragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dragView.h; sourceTree = "<group>"; };
-		3B09DF6B1B1ECC3E004546D6 /* dragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dragView.m; sourceTree = "<group>"; };
 		3B09DF6D1B1EDCD0004546D6 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		3B09DF6E1B1EDCD0004546D6 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		3B20C9E31B1D729500013749 /* WANTED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WANTED.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +70,10 @@
 		3B20CA201B1DA1A400013749 /* Utilitise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilitise.m; sourceTree = "<group>"; };
 		3B20CA251B1DB9A900013749 /* AcountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcountModel.h; sourceTree = "<group>"; };
 		3B20CA261B1DB9A900013749 /* AcountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountModel.m; sourceTree = "<group>"; };
+		3B64A12E1B21876B006B4492 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		3B64A12F1B21876B006B4492 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		3BA9E15C1B21464800E946CE /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
+		3BA9E15D1B21464800E946CE /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		73DF7BD9B591C249921167EB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B0C43530B3D989CD2159CBC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +130,8 @@
 		3B20C9E51B1D729500013749 /* WANTED */ = {
 			isa = PBXGroup;
 			children = (
+				3B64A12E1B21876B006B4492 /* FXBlurView.h */,
+				3B64A12F1B21876B006B4492 /* FXBlurView.m */,
 				3B20CA151B1D8DB900013749 /* class */,
 				3B20CA111B1D8CF400013749 /* Utility */,
 				3B20C9ED1B1D729500013749 /* ViewController.h */,
@@ -183,6 +188,8 @@
 		3B20CA151B1D8DB900013749 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				3BA9E15C1B21464800E946CE /* DragView.h */,
+				3BA9E15D1B21464800E946CE /* DragView.m */,
 				3B20CA161B1D8E1200013749 /* FontPage.h */,
 				3B20CA171B1D8E1200013749 /* FontPage.m */,
 				3B20CA191B1D8E2C00013749 /* LoginView.h */,
@@ -191,8 +198,6 @@
 				3B20CA1D1B1D8E7F00013749 /* WelcomeView.m */,
 				3B20CA251B1DB9A900013749 /* AcountModel.h */,
 				3B20CA261B1DB9A900013749 /* AcountModel.m */,
-				3B09DF6A1B1ECC3E004546D6 /* dragView.h */,
-				3B09DF6B1B1ECC3E004546D6 /* dragView.m */,
 				3B09DF6D1B1EDCD0004546D6 /* Login.h */,
 				3B09DF6E1B1EDCD0004546D6 /* Login.m */,
 			);
@@ -345,6 +350,8 @@
 			files = (
 				3B20C9EF1B1D729500013749 /* ViewController.m in Sources */,
 				3B20CA141B1D8D4F00013749 /* UIView+Common.m in Sources */,
+				3BA9E15E1B21464800E946CE /* DragView.m in Sources */,
+				3B64A1301B21876B006B4492 /* FXBlurView.m in Sources */,
 				3B20CA1B1B1D8E2C00013749 /* LoginView.m in Sources */,
 				3B09DF6F1B1EDCD0004546D6 /* Login.m in Sources */,
 				3B20CA271B1DB9A900013749 /* AcountModel.m in Sources */,
@@ -353,7 +360,6 @@
 				3B20C9E91B1D729500013749 /* main.m in Sources */,
 				3B20CA211B1DA1A400013749 /* Utilitise.m in Sources */,
 				3B20CA181B1D8E1200013749 /* FontPage.m in Sources */,
-				3B09DF6C1B1ECC3E004546D6 /* dragView.m in Sources */,
 				3B20CA1E1B1D8E7F00013749 /* WelcomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
