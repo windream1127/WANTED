@@ -8,7 +8,7 @@
 
 #import "DragView.h"
 #import "FXBlurView.h"
-static const CGFloat kInset = 250.0f;
+static const CGFloat kInset = 234.0f;
 
 @interface DragView()
 
@@ -65,10 +65,10 @@ static const CGFloat kInset = 250.0f;
 }
 
 -(void)setZoomImage:(UIImage *)zoomImage{
-    zoomImage = [zoomImage blurredImageWithRadius:5 iterations:5 tintColor:[UIColor blackColor]];
+//    zoomImage = [zoomImage blurredImageWithRadius:5 iterations:5 tintColor:[UIColor blackColor]];
     if (!_zoomView) {
         _zoomView = [[UIImageView alloc]initWithImage:zoomImage];
-        _zoomView.frame = CGRectMake(-100, -kInset, [UIScreen mainScreen].bounds.size.width+200, 200);
+        _zoomView.frame = CGRectMake(-300, -kInset, [UIScreen mainScreen].bounds.size.width+600, 200);
         _zoomView.contentMode = UIViewContentModeScaleAspectFit;
         _zoomView.backgroundColor = [UIColor whiteColor];
     }
@@ -80,7 +80,7 @@ static const CGFloat kInset = 250.0f;
 -(UIImageView *)zoomView{
     if (!_zoomView) {
         _zoomView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"LOGO"]];
-        _zoomView.frame = CGRectMake(-100, -kInset, [UIScreen mainScreen].bounds.size.width+200, 200);
+        _zoomView.frame = CGRectMake(-300, -kInset, [UIScreen mainScreen].bounds.size.width+600, 200);
         _zoomView.contentMode = UIViewContentModeScaleAspectFit;
         _zoomView.backgroundColor = [UIColor whiteColor];
     }

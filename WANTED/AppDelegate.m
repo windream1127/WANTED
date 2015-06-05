@@ -32,6 +32,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage imageNamed:@"clearBG"]stretchableImageWithLeftCapWidth:5 topCapHeight:5]  forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"clearBG"]];
+    [[UINavigationBar appearance] setTintColor:[UIColor grayColor]];
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -12,7 +12,7 @@ static const CGFloat portraitsWidth = 50.0f;
 @interface Login()
 
 @property(strong, nonatomic)UIButton *bt;
-@property(strong, nonatomic)UIImageView *portraits;
+@property(strong, nonatomic)UIButton *portraits;
 
 @end
 
@@ -21,13 +21,14 @@ static const CGFloat portraitsWidth = 50.0f;
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.zoomImage = [UIImage imageNamed:@"LaraCroft"];
+    self.zoomImage = [UIImage imageNamed:@"head"];
     [self.contentView addSubview:self.bt];
     [self.contentView addSubview:self.portraits];
+    
 }
 
 -(void)isGetTop:(BOOL)isTop{
-    NSLog(@"%d",isTop);
+//    NSLog(@"%d",isTop);
     if (isTop) {
         self.title = @"个人信息";
         self.bt.hidden = YES;
@@ -38,29 +39,42 @@ static const CGFloat portraitsWidth = 50.0f;
     }
 }
 
--(UIImageView *)portraits{
+-(UIButton *)portraits{
     if (!_portraits) {
         CGRect frame = self.contentView.frame;
         frame.origin.x = (frame.size.width - portraitsWidth)/2;
-        frame.origin.y = -170;
+        frame.origin.y = -150;
         frame.size = CGSizeMake(portraitsWidth, portraitsWidth);
-        _portraits = [[UIImageView alloc]initWithFrame:frame];
+        _portraits = [[UIButton alloc]initWithFrame:frame];
         _portraits.layer.cornerRadius = CGRectGetWidth(_portraits.frame)/2.0;
         _portraits.clipsToBounds = YES;
         _portraits.layer.borderColor = [UIColor whiteColor].CGColor;
         _portraits.layer.borderWidth = 1.0f;
-        
-        [_portraits setImage:[UIImage imageNamed:@"LOGO"]];
+        [_portraits setBackgroundImage:[UIImage imageNamed:@"LOGO"] forState:UIControlStateNormal];
+        [_portraits setBackgroundImage:[UIImage imageNamed:@"LOGO"] forState:UIControlStateHighlighted];
+        [_portraits addTarget:self action:@selector(clickPortraits:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _portraits;
 }
+
+-(void)clickPortraits:(id)sender{
+    NSLog(@"login");
+}
 -(UIButton *)bt{
     if (!_bt) {
+        CGRect frame = self.contentView.frame;
+        frame.origin.x = (frame.size.width - 100)/2;
+        frame.origin.y = -50;
+        frame.size = CGSizeMake(100 , 30);
         _bt = [UIButton buttonWithType:UIButtonTypeCustom];
-        _bt.frame = CGRectMake(200, - 50, 80, 40);
-        _bt.backgroundColor = [UIColor blueColor];
-        _bt.titleLabel.text = @"32123";
+        _bt.frame = frame;
+        _bt.backgroundColor = [UIColor whiteColor];
+        [_bt setTitle:@"登  陆" forState:UIControlStateNormal];
+        [_bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _bt.titleLabel.font = [UIFont systemFontOfSize:15.0f];
         _bt.titleLabel.textColor = [UIColor redColor];
+        _bt.alpha = 0.5f;
+        _bt.layer.cornerRadius = 15.0f;
         [_bt addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     }
     return _bt;
