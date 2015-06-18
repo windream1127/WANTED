@@ -50,17 +50,19 @@ static const CGFloat kInset = 234.0f;
         self.zoomView.frame = f;
         
         [self isGetTop:YES];
-//        if([self.delegate respondsToSelector:@selector(isGetTop:)])
-//        {
-//            [self.delegate isGetTop:YES];
-//        }
+        
+        [self.contentView bringSubviewToFront:self.zoomView];
+
     }
     else{
-//        if([self.delegate respondsToSelector:@selector(isGetTop:)])
-//        {
-//            [self.delegate isGetTop:NO];
-//        }
+
         [self isGetTop:NO];
+
+        if (self.block) {
+            self.block(NO);
+        }
+        
+        [self.contentView sendSubviewToBack:self.zoomView];
     }
 }
 
@@ -112,5 +114,14 @@ static const CGFloat kInset = 234.0f;
  */
 -(void)isGetTop:(BOOL)isTop{
     
+}
+
+/**
+ *  设置到达顶部的block
+ *
+ *  @param block 到达顶部的block
+ */
+-(void)getTopWithBlock:(block)block{
+    self.block = [block copy];
 }
 @end

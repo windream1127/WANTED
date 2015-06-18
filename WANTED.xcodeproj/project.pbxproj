@@ -25,6 +25,8 @@
 		3B20CA211B1DA1A400013749 /* Utilitise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CA201B1DA1A400013749 /* Utilitise.m */; };
 		3B20CA271B1DB9A900013749 /* AcountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B20CA261B1DB9A900013749 /* AcountModel.m */; };
 		3B64A1301B21876B006B4492 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B64A12F1B21876B006B4492 /* FXBlurView.m */; };
+		3BA8AEAD1B2695B90072CAFA /* UtilitiseXMPP.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8AEAC1B2695B90072CAFA /* UtilitiseXMPP.m */; };
+		3BA8AEB11B26C5D40072CAFA /* MessageVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8AEB01B26C5D40072CAFA /* MessageVO.m */; };
 		3BA9E15E1B21464800E946CE /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9E15D1B21464800E946CE /* DragView.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,10 @@
 		3B20CA261B1DB9A900013749 /* AcountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountModel.m; sourceTree = "<group>"; };
 		3B64A12E1B21876B006B4492 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		3B64A12F1B21876B006B4492 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		3BA8AEAB1B2695B90072CAFA /* UtilitiseXMPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilitiseXMPP.h; sourceTree = "<group>"; };
+		3BA8AEAC1B2695B90072CAFA /* UtilitiseXMPP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilitiseXMPP.m; sourceTree = "<group>"; };
+		3BA8AEAF1B26C5D40072CAFA /* MessageVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVO.h; sourceTree = "<group>"; };
+		3BA8AEB01B26C5D40072CAFA /* MessageVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageVO.m; sourceTree = "<group>"; };
 		3BA9E15C1B21464800E946CE /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		3BA9E15D1B21464800E946CE /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		73DF7BD9B591C249921167EB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 		3B20C9E51B1D729500013749 /* WANTED */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8AEAE1B26BB5B0072CAFA /* model */,
 				3B64A12E1B21876B006B4492 /* FXBlurView.h */,
 				3B64A12F1B21876B006B4492 /* FXBlurView.m */,
 				3B20CA151B1D8DB900013749 /* class */,
@@ -181,6 +188,8 @@
 				3B20CA131B1D8D4F00013749 /* UIView+Common.m */,
 				3B20CA1F1B1DA1A400013749 /* Utilitise.h */,
 				3B20CA201B1DA1A400013749 /* Utilitise.m */,
+				3BA8AEAB1B2695B90072CAFA /* UtilitiseXMPP.h */,
+				3BA8AEAC1B2695B90072CAFA /* UtilitiseXMPP.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -202,6 +211,15 @@
 				3B09DF6E1B1EDCD0004546D6 /* Login.m */,
 			);
 			name = class;
+			sourceTree = "<group>";
+		};
+		3BA8AEAE1B26BB5B0072CAFA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8AEAF1B26C5D40072CAFA /* MessageVO.h */,
+				3BA8AEB01B26C5D40072CAFA /* MessageVO.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		5147B2C08150CCA7E375A2C5 /* Pods */ = {
@@ -349,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B20C9EF1B1D729500013749 /* ViewController.m in Sources */,
+				3BA8AEAD1B2695B90072CAFA /* UtilitiseXMPP.m in Sources */,
 				3B20CA141B1D8D4F00013749 /* UIView+Common.m in Sources */,
 				3BA9E15E1B21464800E946CE /* DragView.m in Sources */,
 				3B64A1301B21876B006B4492 /* FXBlurView.m in Sources */,
@@ -361,6 +380,7 @@
 				3B20CA211B1DA1A400013749 /* Utilitise.m in Sources */,
 				3B20CA181B1D8E1200013749 /* FontPage.m in Sources */,
 				3B20CA1E1B1D8E7F00013749 /* WelcomeView.m in Sources */,
+				3BA8AEB11B26C5D40072CAFA /* MessageVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,14 @@
 //
 
 #import "Login.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 static const CGFloat portraitsWidth = 50.0f;
 @interface Login()
 
 @property(strong, nonatomic)UIButton *bt;
 @property(strong, nonatomic)UIButton *portraits;
+@property(strong, nonatomic)UIImageView *test;
 
 @end
 
@@ -24,19 +26,45 @@ static const CGFloat portraitsWidth = 50.0f;
     self.zoomImage = [UIImage imageNamed:@"head"];
     [self.contentView addSubview:self.bt];
     [self.contentView addSubview:self.portraits];
+    [self.contentView addSubview:self.test];
+
+    [self getTopWithBlock:^(Boolean isTop) {
+        if (isTop) {
+            self.title = @"个人信息";
+            self.bt.hidden = YES;
+        }
+        else{
+            self.title = @"";
+            self.bt.hidden = NO;
+        }
+    }];
     
 }
 
 -(void)isGetTop:(BOOL)isTop{
 //    NSLog(@"%d",isTop);
-    if (isTop) {
-        self.title = @"个人信息";
-        self.bt.hidden = YES;
+//    if (isTop) {
+//        self.title = @"个人信息";
+//        self.bt.hidden = YES;
+//    }
+//    else{
+//        self.title = @"";
+//        self.bt.hidden = NO;
+//    }
+}
+
+
+-(UIImageView*)test{
+    if (!_test) {
+        CGRect frame = self.contentView.frame;
+        NSURL *url = [NSURL URLWithString:@"http://www.sogou.com/images/logo/new/sogou.png"];
+         NSURL *URL = [NSURL URLWithString:@"http://www.baidu.com/img/bdlogo.png"];
+        NSArray *arr = @[URL,url];
+        _test = [[UIImageView alloc] initWithFrame:frame];
+//        [_test sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"LaraCroft"]];
+        [_test sd_setAnimationImagesWithURLs:arr];
     }
-    else{
-        self.title = @"";
-        self.bt.hidden = NO;
-    }
+    return _test;
 }
 
 -(UIButton *)portraits{

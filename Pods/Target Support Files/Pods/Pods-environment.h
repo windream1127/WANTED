@@ -6,9 +6,87 @@
 // project.
 
 
+// CocoaAsyncSocket
+#define COCOAPODS_POD_AVAILABLE_CocoaAsyncSocket
+#define COCOAPODS_VERSION_MAJOR_CocoaAsyncSocket 7
+#define COCOAPODS_VERSION_MINOR_CocoaAsyncSocket 4
+#define COCOAPODS_VERSION_PATCH_CocoaAsyncSocket 1
+
+// CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
+
+// CocoaLumberjack/Core
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Core
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Core 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Core 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Core 2
+
+// CocoaLumberjack/Extensions
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack_Extensions
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack_Extensions 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack_Extensions 9
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack_Extensions 2
+
 // ECSlidingViewController
 #define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
 #define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 2
 #define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
 #define COCOAPODS_VERSION_PATCH_ECSlidingViewController 3
+
+// Magnet-XMPPFramework
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework 7
+
+// Magnet-XMPPFramework/Core
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_Core
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_Core 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_Core 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_Core 7
+
+// Magnet-XMPPFramework/CoreDataStorage
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_CoreDataStorage
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_CoreDataStorage 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_CoreDataStorage 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_CoreDataStorage 7
+
+// Magnet-XMPPFramework/Roster
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_Roster
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_Roster 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_Roster 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_Roster 7
+
+// Magnet-XMPPFramework/XEP-0060
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_XEP_0060
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_XEP_0060 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_XEP_0060 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_XEP_0060 7
+
+// Magnet-XMPPFramework/XEP-0082
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_XEP_0082
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_XEP_0082 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_XEP_0082 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_XEP_0082 7
+
+// Magnet-XMPPFramework/XEP-0203
+#define COCOAPODS_POD_AVAILABLE_Magnet_XMPPFramework_XEP_0203
+#define COCOAPODS_VERSION_MAJOR_Magnet_XMPPFramework_XEP_0203 3
+#define COCOAPODS_VERSION_MINOR_Magnet_XMPPFramework_XEP_0203 6
+#define COCOAPODS_VERSION_PATCH_Magnet_XMPPFramework_XEP_0203 7
+
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 2
+
+// SDWebImage/Core
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 

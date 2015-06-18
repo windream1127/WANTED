@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPP.h"
 @class ECSlidingViewController;
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,XMPPStreamDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property(strong, nonatomic)UINavigationController *rootNav;
 
 @property(strong, nonatomic)ECSlidingViewController *slidingViewController;
+
+@property (strong, readonly)    XMPPStream      *xmppStream;
 @end
 

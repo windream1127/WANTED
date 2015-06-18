@@ -14,6 +14,22 @@
 
 @implementation UtilityHelper
 /**
+ *  取得当前时间
+ *
+ *  @return 当前时间
+ */
++(NSString *)getCurrentTime{
+    
+    NSDate *nowUTC = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    
+    return [dateFormatter stringFromDate:nowUTC];
+}
+/**
  *  移除滑动
  */
 +(void)removeSwipeGesture{

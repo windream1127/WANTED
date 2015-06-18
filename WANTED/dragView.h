@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//@protocol DragViewDelegate <NSObject>
-//@optional
-//-(void)isGetTop:(BOOL)isTop;
-
-//@end
+typedef void(^block)(Boolean isTop);
 @interface DragView : UIViewController<UIScrollViewDelegate>
 /**
  *  顶部放大图片
@@ -30,5 +26,23 @@
  *
  *  @param isTop 是否达到顶部
  */
+
+/**
+ *  到达顶部的block
+ */
+@property(copy, nonatomic  )block block;
+
+/**
+ *  到达顶部后的操作（子类重写）
+ *
+ *  @param isTop <#isTop description#>
+ */
 -(void)isGetTop:(BOOL)isTop;
+
+/**
+ *  设置到达顶部的block
+ *
+ *  @param block 到达顶部的block
+ */
+-(void)getTopWithBlock:(block)block;
 @end

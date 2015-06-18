@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ECSlidingViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Magnet-XMPPFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>34B308670616CB64F273DD62</key>
+		<key>009D9E6FFF5E8C5DDCAC8A9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2956E5657CA8551B073266F</key>
+		<key>0177172A5557C55C1C433C65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DD5940C66A8E55FB6B318A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D5FFA498E59D0949BA8C21A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6C1C999A4C75F94A5F37112</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE42DF418763EA9BEA1E6E03</key>
 		<dict>
 			<key>primary</key>
 			<true/>

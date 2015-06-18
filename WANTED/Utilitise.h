@@ -11,6 +11,13 @@
 @interface UtilityHelper : NSObject
 
 /**
+ *  取得当前时间
+ *
+ *  @return 当前时间
+ */
++(NSString *)getCurrentTime;
+
+/**
  *  移除滑动
  */
 +(void)removeSwipeGesture;
@@ -35,6 +42,14 @@
  *  @return <#return value description#>
  */
 + (UIColor *) colorWithHexString: (NSString *) stringToConvert;
+
+/**
+ *  开启XMPP服务
+ *
+ *  @return 是否开启成功
+ */
++ (BOOL) startXMPPService;
+
 @end
 
 @interface UIImage(ColorToImage)
