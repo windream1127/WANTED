@@ -8,8 +8,11 @@
 
 #import "Login.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "AFNetworking.h"
 
 static const CGFloat portraitsWidth = 50.0f;
+static  NSString * const kUrl = @"http://agentapphouse.3g.fang.com/http/agentservice.jsp?verifycode=B703E26A7D26A00DE4BE9F30E6E0E97D&agentid=160452039&city=%E5%8C%97%E4%BA%AC&messagename=getagentdetail&wirelesscode=C14A8CBE3EBBA1EEAFCE27EEF3463879";
+
 @interface Login()
 
 @property(strong, nonatomic)UIButton *bt;
@@ -28,6 +31,7 @@ static const CGFloat portraitsWidth = 50.0f;
     [self.contentView addSubview:self.portraits];
     [self.contentView addSubview:self.test];
 
+    
     [self getTopWithBlock:^(Boolean isTop) {
         if (isTop) {
             self.title = @"个人信息";
@@ -39,6 +43,21 @@ static const CGFloat portraitsWidth = 50.0f;
         }
     }];
     
+    [self fecthHttpData];
+    
+}
+
+-(void)fecthHttpData{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    
+    [manager GET:kUrl parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
 }
 
 -(void)isGetTop:(BOOL)isTop{

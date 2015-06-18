@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "ECSlidingViewController.h"
 #import "FontPage.h"
+#import "AFNetworking.h"
 @interface AppDelegate ()
 
 @end
@@ -36,6 +37,21 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    /**
+     AFNetworkReachabilityStatusUnknown          = -1,  // 未知
+     AFNetworkReachabilityStatusNotReachable     = 0,   // 无连接
+     AFNetworkReachabilityStatusReachableViaWWAN = 1,   // 3G 花钱
+     AFNetworkReachabilityStatusReachableViaWiFi = 2,   // WiFi
+     */
+    // 如果要检测网络状态的变化,必须用检测管理器的单例的startMonitoring
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    // 检测网络连接的单例,网络变化时的回调方法
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"%ld", status);
+    }];
+    
     
     [self buildFrame];
     
